@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Airline Ticket</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="canadian_dollar">Canadian Dollar</string>
+    <string name="cad">CAD</string>
+    <string name="countryFlag">countryFlag</string>
+    <string name="selectCurrency">Select Currency</string>
+    <string name="no_notification">No Notification</string>
+    <string name="notification">Notifications</string>
+    <string name="ing">Home</string>
+    <string name="ngn">NGN</string>
+</resources>
