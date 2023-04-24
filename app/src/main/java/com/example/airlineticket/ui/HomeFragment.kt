@@ -31,5 +31,8 @@ class HomeFragment : Fragment() {
         binding.currency.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_currencyFragment)
         }
+        binding.notificationBell.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_notificationsFragment)
+        }
     }
 }
