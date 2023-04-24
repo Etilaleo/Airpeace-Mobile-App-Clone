@@ -11,4 +11,8 @@
     <string name="notification">Notifications</string>
     <string name="ing">Home</string>
     <string name="ngn">NGN</string>
+    <string name="select_city">Select City</string>
+    <string name="from">From</string>
+    <string name="where_to">Where To?</string>
+    <string name="destination">Destination</string>
 </resources>
