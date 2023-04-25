@@ -15,4 +15,10 @@
     <string name="from">From</string>
     <string name="where_to">Where To?</string>
     <string name="destination">Destination</string>
+    <string name="check_in">Check-in</string>
+    <string name="bookings">Bookings</string>
+    <string name="flights">Flights</string>
+    <string name="airplaneicon">airplaneIcon</string>
+    <string name="upcoming_trip">Upcoming trip</string>
+    <string name="no_trip">No trip</string>
 </resources>
