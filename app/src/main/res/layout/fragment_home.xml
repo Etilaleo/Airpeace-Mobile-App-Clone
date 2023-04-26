@@ -54,7 +54,7 @@
                 android:layout_marginEnd="4dp"
                 android:text="@string/ngn"
                 android:textColor="@color/white"
-                android:textSize="17sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/home"
                 app:layout_constraintEnd_toStartOf="@id/downArrow"
                 app:layout_constraintTop_toTopOf="@id/home" />
@@ -107,7 +107,6 @@
                         android:id="@+id/destination"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/destination"
@@ -121,6 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="@string/from"
+                        android:textSize="12sp"
                         android:textColor="@color/app_text_color"
                         app:layout_constraintStart_toEndOf="@id/destination"
                         app:layout_constraintTop_toTopOf="@+id/destination" />
@@ -132,7 +132,7 @@
                         android:layout_marginStart="20dp"
                         android:text="@string/select_city"
                         android:textColor="@color/app_text_color"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/destination"
                         app:layout_constraintTop_toBottomOf="@+id/from" />
 
@@ -153,6 +153,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="10dp"
+                        android:textSize="12sp"
                         android:text="@string/destination"
                         android:textColor="@color/app_text_color"
                         app:layout_constraintStart_toEndOf="@id/destination"
@@ -165,7 +166,7 @@
                         android:layout_marginStart="20dp"
                         android:text="@string/where_to"
                         android:textColor="@color/app_text_color"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/destination"
                         app:layout_constraintTop_toBottomOf="@+id/going" />
 
@@ -218,7 +219,7 @@
                 android:layout_marginTop="7dp"
                 android:text="@string/flights"
                 android:textColor="#FF656060"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/flights"
                 app:layout_constraintStart_toStartOf="@id/flights"
                 app:layout_constraintTop_toBottomOf="@id/flights" />
@@ -244,6 +245,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/check_in"
+                        android:contentDescription="@string/check_in"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +260,7 @@
                 android:layout_marginTop="7dp"
                 android:text="@string/check_in"
                 android:textColor="#FF656060"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/checkIn"
                 app:layout_constraintStart_toStartOf="@id/checkIn"
                 app:layout_constraintTop_toBottomOf="@id/checkIn" />
@@ -281,9 +283,10 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="27dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
                         android:src="@drawable/booking"
+                        android:contentDescription="@string/bookings"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -298,7 +301,7 @@
                 android:layout_marginTop="7dp"
                 android:text="@string/bookings"
                 android:textColor="#FF656060"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@id/bookings"
                 app:layout_constraintStart_toStartOf="@id/bookings"
                 app:layout_constraintTop_toBottomOf="@id/bookings" />
@@ -311,13 +314,13 @@
                 android:layout_marginTop="19dp"
                 android:text="@string/upcoming_trip"
                 android:textColor="#FF656060"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flightsText" />
 
             <ImageView
-                android:layout_width="170dp"
+                android:layout_width="190dp"
                 android:layout_height="160dp"
                 android:contentDescription="@string/no_trip"
                 android:src="@drawable/no_trip_screenshot"

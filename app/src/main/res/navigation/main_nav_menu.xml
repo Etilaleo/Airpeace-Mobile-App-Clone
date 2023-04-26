@@ -21,10 +21,26 @@
         <action
             android:id="@+id/action_homeFragment_to_notificationsFragment"
             app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_selectCityFragment"
+            app:destination="@id/selectCityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_whereToFragment"
+            app:destination="@id/whereToFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificationsFragment"
         android:name="com.example.airlineticket.ui.NotificationsFragment"
         android:label="fragment_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/whereToFragment"
+        android:name="com.example.airlineticket.ui.WhereToFragment"
+        android:label="fragment_where_to"
+        tools:layout="@layout/fragment_where_to" />
+    <fragment
+        android:id="@+id/selectCityFragment"
+        android:name="com.example.airlineticket.ui.SelectCityFragment"
+        android:label="fragment_select_city"
+        tools:layout="@layout/fragment_select_city" />
 </navigation>

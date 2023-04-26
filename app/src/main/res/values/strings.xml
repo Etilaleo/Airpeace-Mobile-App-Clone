@@ -21,4 +21,9 @@
     <string name="airplaneicon">airplaneIcon</string>
     <string name="upcoming_trip">Upcoming trip</string>
     <string name="no_trip">No trip</string>
+    <string name="bracket_close">)</string>
+    <string name="akr">AKR</string>
+    <string name="akure">Akure</string>
+    <string name="bracket_open">(</string>
+    <string name="nigeria">Nigeria</string>
 </resources>
