@@ -34,5 +34,8 @@ class HomeFragment : Fragment() {
         binding.notificationBell.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_notificationsFragment)
         }
+        binding.selectCity.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_selectCityFragment)
+        }
     }
 }
