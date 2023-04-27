@@ -23,4 +23,10 @@ object Currencies {
         )
     }
 
+    fun whereTo() : ArrayList<SelectCityData> {
+        return arrayListOf(
+            SelectCityData("Abuja", "ABJ", "Nigeria")
+        )
+    }
+
 }

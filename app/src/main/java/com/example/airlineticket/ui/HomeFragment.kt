@@ -25,8 +25,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val actionBar = (activity as AppCompatActivity).supportActionBar
-        actionBar?.hide()
+        actionBar()
 
         binding.currency.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_currencyFragment)
@@ -37,5 +36,13 @@ class HomeFragment : Fragment() {
         binding.selectCity.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_selectCityFragment)
         }
+        binding.WhereTo.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_whereToFragment)
+        }
+    }
+
+    private fun actionBar() {
+        val actionBar = (activity as AppCompatActivity).supportActionBar
+        actionBar?.hide()
     }
 }

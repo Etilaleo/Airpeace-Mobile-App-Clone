@@ -21,7 +21,11 @@ class NotificationsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Customizing our Appbar
+        actionBar()
+    }
+
+    //Customizing our Appbar
+    private fun actionBar() {
         val actionBar = (activity as AppCompatActivity).supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)
         actionBar?.title = getString(R.string.notification)
