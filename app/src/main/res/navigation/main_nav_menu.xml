@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_homeFragment_to_whereToFragment"
             app:destination="@id/whereToFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_checkInFragment"
+            app:destination="@id/checkInFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificationsFragment"
@@ -43,4 +46,9 @@
         android:name="com.example.airlineticket.ui.SelectCityFragment"
         android:label="fragment_select_city"
         tools:layout="@layout/fragment_select_city" />
+    <fragment
+        android:id="@+id/checkInFragment"
+        android:name="com.example.airlineticket.CheckInFragment"
+        android:label="fragment_check_in"
+        tools:layout="@layout/fragment_check_in" />
 </navigation>
