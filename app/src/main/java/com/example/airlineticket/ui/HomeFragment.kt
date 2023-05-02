@@ -27,6 +27,9 @@ class HomeFragment : Fragment() {
 
         actionBar()
 
+        binding.bookings.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_bookingsFragment)
+        }
         binding.currency.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_currencyFragment)
         }
@@ -38,6 +41,12 @@ class HomeFragment : Fragment() {
         }
         binding.WhereTo.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_whereToFragment)
+        }
+        binding.checkIn.setOnClickListener{
+            findNavController().navigate(R.id.action_homeFragment_to_checkInFragment)
+        }
+        binding.flights.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_flightsFragment)
         }
     }
 

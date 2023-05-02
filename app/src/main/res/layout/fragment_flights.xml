@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.FlightsFragment">
+
+    <ImageView
+        android:id="@+id/searchBackground"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:contentDescription="@string/search_flight"
+        android:src="@drawable/search_flight_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        app:layout_constraintEnd_toEndOf="@id/searchBackground"
+        app:layout_constraintStart_toStartOf="@id/searchBackground"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/searchFlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_flight"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/searchCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="@string/ngn"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/searchFlight"
+            app:layout_constraintEnd_toStartOf="@id/downArrow"
+            app:layout_constraintTop_toTopOf="@id/searchFlight" />
+
+
+        <ImageView
+            android:id="@+id/downArrow"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/down"
+            app:layout_constraintBottom_toBottomOf="@id/searchFlight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/searchFlight" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchDestinationsMaterial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchFlight">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/destination"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/from"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/destination"
+                    app:layout_constraintTop_toTopOf="@+id/destination" />
+
+                <TextView
+                    android:id="@+id/selectCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/select_city"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@id/destination"
+                    app:layout_constraintTop_toBottomOf="@+id/from" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#DFDEDE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/destination"
+                    app:layout_constraintTop_toBottomOf="@+id/selectCity" />
+
+                <TextView
+                    android:id="@+id/going"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/destination"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/destination"
+                    app:layout_constraintTop_toBottomOf="@id/line" />
+
+                <TextView
+                    android:id="@+id/WhereTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/where_to"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@id/destination"
+                    app:layout_constraintTop_toBottomOf="@+id/going" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/searchLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/search_flight"
+            android:src="@drawable/search_for_flight_line"
+            app:layout_constraintEnd_toEndOf="@+id/searchDestinationsMaterial"
+            app:layout_constraintStart_toStartOf="@+id/searchDestinationsMaterial"
+            app:layout_constraintTop_toBottomOf="@id/searchDestinationsMaterial" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/oneWayAndRoundTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/oneWay"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one_way"
+                    android:textAllCaps="false"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/roundTrip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/roundTrip"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/round_trip"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/app_text_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/oneWay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/departureAndReturnDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oneWayAndRoundTrip">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/dateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/search_flight"
+                    android:padding="10dp"
+                    android:src="@drawable/destination_date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/dateLine"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="#BFC9CACA"
+                    app:layout_constraintBottom_toBottomOf="@id/dateIcon"
+                    app:layout_constraintStart_toEndOf="@id/dateIcon"
+                    app:layout_constraintTop_toTopOf="@id/dateIcon" />
+
+                <TextView
+                    android:id="@+id/depatureText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/search_flight"
+                    android:text="@string/departure_date"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toEndOf="@id/dateLine"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mainDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/search_flight"
+                    android:text="@string/tue_02_may_2023"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/dateLine"
+                    app:layout_constraintTop_toBottomOf="@id/depatureText" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/returnDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mainDate">
+
+                    <ImageView
+                        android:id="@+id/dateIcon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/search_flight"
+                        android:padding="10dp"
+                        android:src="@drawable/destination_date"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/dateLine2"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#BFC9CACA"
+                        app:layout_constraintBottom_toBottomOf="@id/dateIcon2"
+                        app:layout_constraintStart_toEndOf="@id/dateIcon2"
+                        app:layout_constraintTop_toTopOf="@id/dateIcon2" />
+
+                    <TextView
+                        android:id="@+id/depatureText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/search_flight"
+                        android:text="@string/return_date"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toEndOf="@id/dateLine2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/search_flight"
+                        android:text="@string/tue_02_may_2023"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/dateLine2"
+                        app:layout_constraintTop_toBottomOf="@id/depatureText2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

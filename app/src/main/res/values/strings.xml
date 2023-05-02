@@ -28,4 +28,14 @@
     <string name="nigeria">Nigeria</string>
     <string name="contact_us">Contact us</string>
     <string name="rate_us">Rate us</string>
+    <string name="check_in2">Check In</string>
+    <string name="surname">Surname</string>
+    <string name="booking_reference">Booking reference</string>
+    <string name="get_booking">Get Booking</string>
+    <string name="search_flight">Search Flight</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="one_way">One Way</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="tue_02_may_2023">Tue, 02 May 2023</string>
+    <string name="return_date">Return Date</string>
 </resources>
