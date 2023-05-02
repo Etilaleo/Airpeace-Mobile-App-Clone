@@ -38,4 +38,7 @@
     <string name="departure_date">Departure Date</string>
     <string name="tue_02_may_2023">Tue, 02 May 2023</string>
     <string name="return_date">Return Date</string>
+    <string name="_1_adult_0_children_0_infants">1 Adult, 0 Children, 0 Infants</string>
+    <string name="passengers">Passengers</string>
+    <string name="covid_19_update">Covid-19 update</string>
 </resources>

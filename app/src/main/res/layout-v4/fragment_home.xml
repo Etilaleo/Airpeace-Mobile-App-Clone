@@ -131,7 +131,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="@string/select_city"
-                        android:textColor="@color/app_text_color"
+                        android:textColor="@color/app_text_color_bold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/destination"
                         app:layout_constraintTop_toBottomOf="@+id/from" />
@@ -165,7 +165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="@string/where_to"
-                        android:textColor="@color/app_text_color"
+                        android:textColor="@color/app_text_color_bold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/destination"
                         app:layout_constraintTop_toBottomOf="@+id/going" />
@@ -353,7 +353,7 @@
                 android:id="@+id/covid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Covid-19 update"
+                android:text="@string/covid_19_update"
                 android:textSize="19sp"
                 android:layout_marginStart="12dp"
                 app:layout_constraintStart_toEndOf="@+id/covidIcon"
