@@ -394,15 +394,61 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/howManyPassengers"
+                        android:id="@+id/howManyPassengersAdult"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
-                        android:text="@string/_1_adult_0_children_0_infants"
+                        android:text="@string/_0_adult"
                         android:textColor="@color/app_text_color_bold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/passengerLine"
                         app:layout_constraintTop_toBottomOf="@id/passengerFirstText" />
+
+                    <TextView
+                        android:id="@+id/howManyPassengersChildren"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/_0_children"
+                        android:textColor="@color/app_text_color_bold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/howManyPassengersAdult"
+                        app:layout_constraintTop_toBottomOf="@id/passengerFirstText" />
+
+                    <TextView
+                        android:id="@+id/howManyPassengersInfants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="@string/_0_infants"
+                        android:textColor="@color/app_text_color_bold"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@id/howManyPassengersChildren"
+                        app:layout_constraintTop_toBottomOf="@id/passengerFirstText" />
+
+
+                    <TextView
+                        android:id="@+id/adult12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adult_12"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintStart_toStartOf="@id/howManyPassengersAdult"
+                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersChildren"/>
+
+
+                    <TextView
+                        android:id="@+id/adultText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_1"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        android:padding="15dp"
+                        app:layout_constraintEnd_toEndOf="@id/howManyPassengersInfants"
+                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersInfants"/>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
