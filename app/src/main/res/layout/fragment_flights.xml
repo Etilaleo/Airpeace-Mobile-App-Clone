@@ -180,11 +180,11 @@
                 android:id="@+id/oneWayAndRoundTrip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -215,11 +215,11 @@
                         android:layout_height="wrap_content"
                         android:text="@string/round_trip"
                         android:textAllCaps="false"
-                        android:textSize="15sp"
                         android:textColor="@color/app_text_color_bold"
+                        android:textSize="15sp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/oneWay"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/oneWay"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -228,12 +228,12 @@
                 android:id="@+id/departureAndReturnDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/oneWayAndRoundTrip">
@@ -263,7 +263,7 @@
                         app:layout_constraintTop_toTopOf="@id/dateIcon" />
 
                     <TextView
-                        android:id="@+id/depatureText"
+                        android:id="@+id/departureText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
@@ -284,7 +284,7 @@
                         android:textColor="@color/app_text_color_bold"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/dateLine"
-                        app:layout_constraintTop_toBottomOf="@id/depatureText" />
+                        app:layout_constraintTop_toBottomOf="@id/departureText" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/returnDate"
@@ -317,7 +317,7 @@
                             app:layout_constraintTop_toTopOf="@id/dateIcon2" />
 
                         <TextView
-                            android:id="@+id/depatureText2"
+                            android:id="@+id/departureText2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
@@ -337,7 +337,7 @@
                             android:textColor="@color/app_text_color_bold"
                             android:textSize="18sp"
                             app:layout_constraintStart_toEndOf="@id/dateLine2"
-                            app:layout_constraintTop_toBottomOf="@id/depatureText2" />
+                            app:layout_constraintTop_toBottomOf="@id/departureText2" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -348,12 +348,12 @@
                 android:id="@+id/amountOfPassengers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardElevation="10dp"
-                app:cardCornerRadius="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
                 android:layout_marginTop="25dp"
+                android:layout_marginEnd="10dp"
                 android:backgroundTint="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/departureAndReturnDate">
@@ -368,7 +368,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/search_flight"
-                        android:padding="10dp"
+                        android:padding="7dp"
                         android:src="@drawable/destination_date"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -431,28 +431,116 @@
                         android:id="@+id/adult12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
                         android:text="@string/adult_12"
                         android:textColor="@color/app_text_color"
                         android:textSize="18sp"
-                        android:layout_marginTop="12dp"
                         app:layout_constraintStart_toStartOf="@id/howManyPassengersAdult"
-                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersChildren"/>
+                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersChildren" />
 
 
                     <TextView
                         android:id="@+id/adultText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="15dp"
                         android:text="@string/_1"
                         android:textColor="@color/app_text_color"
                         android:textSize="18sp"
-                        android:padding="15dp"
                         app:layout_constraintEnd_toEndOf="@id/howManyPassengersInfants"
-                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersInfants"/>
+                        app:layout_constraintTop_toBottomOf="@id/howManyPassengersInfants" />
+
+
+                    <View
+                        android:id="@+id/adultDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="7dp"
+                        android:background="#DFDEDE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/adult12"
+                        app:layout_constraintTop_toBottomOf="@id/adultText" />
+
+
+                    <TextView
+                        android:id="@+id/children"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/children_2_11"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/adultDivider"
+                        app:layout_constraintTop_toBottomOf="@id/adultDivider" />
+
+
+                    <TextView
+                        android:id="@+id/childrenText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="15dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/adultText"
+                        app:layout_constraintTop_toBottomOf="@id/adultText" />
+
+
+                    <View
+                        android:id="@+id/childrenDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#DFDEDE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/adult12"
+                        app:layout_constraintTop_toBottomOf="@id/childrenText" />
+
+
+                    <TextView
+                        android:id="@+id/infants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:text="@string/infants_0_2"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="@id/childrenDivider"
+                        app:layout_constraintTop_toBottomOf="@id/childrenDivider" />
+
+
+                    <TextView
+                        android:id="@+id/infantsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="15dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/app_text_color"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@id/childrenText"
+                        app:layout_constraintTop_toBottomOf="@id/childrenText" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/searchForFlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:text="@string/search_flight"
+                android:padding="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/amountOfPassengers" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

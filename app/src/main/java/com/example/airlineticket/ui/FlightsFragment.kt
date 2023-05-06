@@ -29,9 +29,16 @@ class FlightsFragment : Fragment() {
         actionBar()
 
         binding.adultText.setOnClickListener {
-            dialog("1")
+            dialog(1, 1)
         }
 
+        binding.childrenText.setOnClickListener {
+            dialog(0, 2)
+        }
+
+        binding.infantsText.setOnClickListener {
+            dialog(0, 3)
+        }
 
         binding.oneWay.setOnClickListener {
             binding.returnDate.visibility = View.GONE
@@ -42,20 +49,32 @@ class FlightsFragment : Fragment() {
 
     }
 
-    private fun dialog(num : String) {
+    private fun dialog(npMinValue : Int, num : Int) {
         val builder = AlertDialog.Builder(requireContext()).apply {
             this.setCancelable(true)
             val customLayout = layoutInflater.inflate(R.layout.custom_numberpicker_dialog, null)
             this.setView(customLayout)
             val np = customLayout.findViewById<NumberPicker>(R.id.numberPicker)
             np.maxValue = 10
-            np.minValue = 1
+            np.minValue = npMinValue
             np.wrapSelectorWheel = true
             np.setOnValueChangedListener { _, _, newVal ->
-                if (num == "1") {
-                    val aText = "$newVal Adult,"
-                    binding.adultText.text = newVal.toString()
-                    binding.howManyPassengersAdult.text = aText
+                when (num) {
+                    1 -> {
+                        binding.adultText.text = newVal.toString()
+                        val aText = "${binding.adultText.text} Adult,"
+                        binding.howManyPassengersAdult.text = aText
+                    }
+                    2 -> {
+                        binding.childrenText.text = newVal.toString()
+                        val bText = "${binding.childrenText.text} Children,"
+                        binding.howManyPassengersChildren.text = bText
+                    }
+                    else  -> {
+                        binding.infantsText.text = newVal.toString()
+                        val cText = "${binding.infantsText.text} Infants"
+                        binding.howManyPassengersInfants.text = cText
+                    }
                 }
             }
             this.setNegativeButton("OK") { _: DialogInterface, _: Int ->
