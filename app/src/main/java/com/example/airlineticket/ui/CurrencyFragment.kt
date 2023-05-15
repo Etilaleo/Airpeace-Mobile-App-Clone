@@ -1,18 +1,18 @@
 package com.example.airlineticket.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+//import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.airlineticket.Currencies
-import com.example.airlineticket.R
+//import com.example.airlineticket.R
 import com.example.airlineticket.adapters.CurrencyAdapter
 import com.example.airlineticket.databinding.FragmentCurrencyBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class CurrencyFragment : Fragment() {
+class CurrencyFragment : BottomSheetDialogFragment() {
 
     private lateinit var binding : FragmentCurrencyBinding
     private var curList = Currencies.currency()
@@ -28,17 +28,17 @@ class CurrencyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        actionBar()
+//        actionBar()
         adapter()
     }
 
     //Customizing our Appbar
-    private fun actionBar() {
-        val actionBar = (activity as AppCompatActivity).supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-        actionBar?.title = getString(R.string.selectCurrency)
-        actionBar?.show()
-    }
+//    private fun actionBar() {
+//        val actionBar = (activity as AppCompatActivity).supportActionBar
+//        actionBar?.setDisplayHomeAsUpEnabled(true)
+//        actionBar?.title = getString(R.string.selectCurrency)
+//        actionBar?.show()
+//    }
 
     private fun adapter() {
         val curAdapter = CurrencyAdapter(requireContext(), curList)

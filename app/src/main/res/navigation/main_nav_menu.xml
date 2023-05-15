@@ -5,7 +5,7 @@
     android:id="@+id/main_nav_menu"
     app:startDestination="@id/homeFragment">
 
-    <fragment
+    <dialog
         android:id="@+id/currencyFragment"
         android:name="com.example.airlineticket.ui.CurrencyFragment"
         android:label="fragment_currency"
